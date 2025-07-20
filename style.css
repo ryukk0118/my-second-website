@@ -1,128 +1,26 @@
-/* リセットCSS */
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
+/* 全体リセットと基本 */
+body{font-family:Arial,sans-serif;margin:0;padding:0;background:#f9f9f9;color:#333;}
+header, footer{background:#4CAF50;color:#fff;text-align:center;padding:10px;}
+h1,h2{margin:10px 0;}
+section{margin:20px;padding:15px;background:#fff;border-radius:8px;box-shadow:0 2px 4px rgba(0,0,0,0.1);}
 
-/* 基本スタイル */
-body {
-    font-family: 'Arial', sans-serif;
-    line-height: 1.6;
-    color: #333;
-    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-    min-height: 100vh;
-    padding: 20px;
-}
+/* 地図表示領域 */
+#map{height:300px;border-radius:8px;}
 
-/* コンテナ */
-.container {
-    max-width: 800px;
-    margin: 0 auto;
-    background-color: rgba(255, 255, 255, 0.95);
-    padding: 40px;
-    border-radius: 20px;
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
-    animation: fadeIn 1s ease-in;
-}
+/* タイムライン */
+.timeline{position:relative;max-width:800px;margin:0 auto;padding:20px 0;}
+.timeline::after{content:'';position:absolute;width:6px;background:#ddd;top:0;bottom:0;left:50%;transform:translateX(-50%);}
+.container{padding:10px 40px;position:relative;width:50%;}
+.container.left{left:0;}
+.container.right{left:50%;}
+.container::after{content:'';position:absolute;width:20px;height:20px;border-radius:50%;background:#4CAF50;top:15px;z-index:1;}
+.container.left::after{right:-10px;}
+.container.right::after{left:-10px;}
+.container.must .content{background:#ffebee;border-left:4px solid #e57373;}
+.content{padding:10px;background:#fff;position:relative;border-radius:6px;}
+.container.left .content::before{content:'';position:absolute;top:18px;right:100%;border:10px solid transparent;border-right:10px solid #fff;}
+.container.right .content::before{content:'';position:absolute;top:18px;left:100%;border:10px solid transparent;border-left:10px solid #fff;}
 
-/* アニメーション */
-@keyframes fadeIn {
-    from {
-        opacity: 0;
-        transform: translateY(30px);
-    }
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
-}
-
-/* 見出し */
-h1 {
-    color: #764ba2;
-    text-align: center;
-    margin-bottom: 30px;
-    font-size: 2.5em;
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
-}
-
-h2 {
-    color: #667eea;
-    margin: 20px 0 15px;
-    border-bottom: 2px solid #667eea;
-    padding-bottom: 5px;
-}
-
-/* プロフィール */
-.profile {
-    text-align: center;
-    margin: 30px 0;
-    padding: 20px;
-    background-color: #f8f9fa;
-    border-radius: 10px;
-}
-
-/* リスト */
-.hobby-list {
-    background-color: #f0f4f8;
-    padding: 25px;
-    border-radius: 10px;
-    margin: 20px 0;
-}
-
-.hobby-list ul {
-    list-style: none;
-}
-
-.hobby-list li {
-    padding: 10px 0;
-    border-bottom: 1px solid #e0e0e0;
-    transition: transform 0.3s ease;
-}
-
-.hobby-list li:hover {
-    transform: translateX(10px);
-    color: #667eea;
-}
-
-.hobby-list li:last-child {
-    border-bottom: none;
-}
-
-/* リンク */
-a {
-    color: #667eea;
-    text-decoration: none;
-    transition: color 0.3s ease;
-}
-
-a:hover {
-    color: #764ba2;
-    text-decoration: underline;
-}
-
-/* フッター */
-.github-link {
-    text-align: center;
-    margin-top: 40px;
-    padding-top: 20px;
-    border-top: 1px solid #e0e0e0;
-}
-
-/* ボタン */
-.btn {
-    display: inline-block;
-    padding: 10px 20px;
-    background-color: #667eea;
-    color: white;
-    border-radius: 25px;
-    transition: all 0.3s ease;
-    margin: 10px;
-}
-
-.btn:hover {
-    background-color: #764ba2;
-    transform: scale(1.05);
-    text-decoration: none;
-}
+/* SNSリスト */
+#sns ul{list-style:none;padding:0;}
+#sns li{background:url('check-icon.png') no-repeat left center;padding-left:25px;margin:5px 0;}
