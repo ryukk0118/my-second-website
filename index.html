@@ -1,51 +1,55 @@
 <!DOCTYPE html>
 <html lang="ja">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>私の最初のWebサイト</title>
-  <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>出雲日帰りデートプラン</title>
+  <link rel="stylesheet" href="styles.css"/>
+  <link
+    rel="stylesheet"
+    href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+    integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY="
+    crossorigin=""/>
 </head>
 <body>
-    <div class="container">
-        <h1>ようこそ！私のWebサイトへ 🎉</h1>
-        
-        <div class="profile">
-            <h2>自己紹介</h2>
-            <p>こんにちは！私は<strong>[あなたの名前]</strong>です。</p>
-            <p>GitHubで初めてWebサイトを作りました！</p>
-        </div>
+  <header><h1>出雲日帰りデートプラン</h1><p>広島発〜21時帰着</p></header>
 
-        <div class="hobby-list">
-            <h3>好きなこと・趣味</h3>
-            <ul>
-                <li>🎮 ゲーム（特に[好きなゲーム名]）</li>
-                <li>📚 読書（[好きなジャンル]が好き）</li>
-                <li>🎵 音楽を聴くこと</li>
-                <li>💻 プログラミング（今日から！）</li>
-            </ul>
-        </div>
+  <section id="map-section">
+    <h2>観光マップ</h2>
+    <div id="map"></div>
+  </section>
 
-        <div class="hobby-list">
-            <h3>これから挑戦したいこと</h3>
-            <ul>
-                <li>かっこいいWebサイトを作る</li>
-                <li>ゲームを作ってみる</li>
-                <li>アプリ開発</li>
-            </ul>
-        </div>
-
-        <div class="github-link">
-            <p>GitHubで作成: <a href="https://github.com/[あなたのユーザー名]">[あなたのユーザー名]</a></p>
-            <p>作成日: <span id="date"></span></p>
-        </div>
+  <section id="timeline">
+    <h2>スケジュール（停車時間＆所要時間）</h2>
+    <div class="timeline">
+      <!-- Example entry -->
+      <div class="container left">
+        <div class="content"><h3>7:30 出発</h3><p>広島コストコ集合・出発</p></div>
+      </div>
+      <!-- ... add entries following structure ... -->
+      <div class="container right must">
+        <div class="content"><h3>11:15 🔴 稲佐の浜</h3><p>神話の浜で御砂清め・散策（30min）</p></div>
+      </div>
+      <!-- Similarly other events -->
     </div>
+  </section>
 
-    <script>
-        // 今日の日付を表示
-        document.getElementById('date').textContent = new Date().toLocaleDateString('ja-JP');
-    </script>
-    <script src="script.js"></script>
-    
+  <section id="sns">
+    <h2>SNS映えポイント</h2>
+    <ul>
+      <li>石見銀山のレトロ街並み</li>
+      <li>稲佐の浜の神話ロマンショット</li>
+      <li>出雲大社のうさぎ＆しめ縄</li>
+      <li>島根ワイナリーで乾杯ショット</li>
+      <li>日御碕灯台×朱色神社絶景</li>
+    </ul>
+  </section>
+
+  <footer><p>© 2025 出雲日帰りデートプラン</p></footer>
+
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
+    integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo="
+    crossorigin=""></script>
+  <script src="scripts.js"></script>
 </body>
 </html>
