@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>私の最初のWebサイト</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #f0f0f0;
+        }
+        .container {
+            background-color: white;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+        h1 {
+            color: #333;
+            text-align: center;
+        }
+        .profile {
+            text-align: center;
+            margin: 20px 0;
+        }
+        .hobby-list {
+            background-color: #f8f8f8;
+            padding: 20px;
+            border-radius: 5px;
+        }
+        .hobby-list li {
+            margin: 10px 0;
+        }
+        .github-link {
+            text-align: center;
+            margin-top: 30px;
+        }
+        a {
+            color: #0366d6;
+            text-decoration: none;
+        }
+        a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>ようこそ！私のWebサイトへ 🎉</h1>
+        
+        <div class="profile">
+            <h2>自己紹介</h2>
+            <p>こんにちは！私は<strong>[あなたの名前]</strong>です。</p>
+            <p>GitHubで初めてWebサイトを作りました！</p>
+        </div>
+
+        <div class="hobby-list">
+            <h3>好きなこと・趣味</h3>
+            <ul>
+                <li>🎮 ゲーム（特に[好きなゲーム名]）</li>
+                <li>📚 読書（[好きなジャンル]が好き）</li>
+                <li>🎵 音楽を聴くこと</li>
+                <li>💻 プログラミング（今日から！）</li>
+            </ul>
+        </div>
+
+        <div class="hobby-list">
+            <h3>これから挑戦したいこと</h3>
+            <ul>
+                <li>かっこいいWebサイトを作る</li>
+                <li>ゲームを作ってみる</li>
+                <li>アプリ開発</li>
+            </ul>
+        </div>
+
+        <div class="github-link">
+            <p>GitHubで作成: <a href="https://github.com/[あなたのユーザー名]">[あなたのユーザー名]</a></p>
+            <p>作成日: <span id="date"></span></p>
+        </div>
+    </div>
+
+    <script>
+        // 今日の日付を表示
+        document.getElementById('date').textContent = new Date().toLocaleDateString('ja-JP');
+    </script>
+</body>
+</html>
